@@ -14,10 +14,18 @@
  * limitations under the License.
  */
 
-package com.hodak.ppasic.core.model.data
+package com.hodak.ppasic.core.data.repository
 
-data class UserData(
-    val darkThemeConfig: DarkThemeConfig,
-    val useDynamicColor: Boolean,
-    val shouldHideOnboarding: Boolean,
-)
+import com.hodak.ppasic.core.model.data.DarkThemeConfig
+import com.hodak.ppasic.core.model.data.UserData
+import kotlinx.coroutines.flow.Flow
+
+interface UserDataRepository {
+    val userData: Flow<UserData>
+
+    suspend fun setDarkThemeConfig(darkThemeConfig: DarkThemeConfig)
+
+    suspend fun setDynamicColorPreference(useDynamicColor: Boolean)
+
+    suspend fun setShouldHideOnboarding(shouldHideOnboarding: Boolean)
+}

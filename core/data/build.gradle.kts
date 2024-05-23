@@ -14,3 +14,7 @@ android {
         }
     }
 }
+
+dependencies{
+    api(projects.core.database)
+}
