@@ -5,6 +5,7 @@ androidTools = "31.3.0"
 androidxActivity = "1.8.0"
 androidxComposeBom = "2024.02.02"
 androidxComposeCompiler = "1.5.8"
+androidxDataStore = "1.0.0"
 androidxHiltNavigationCompose = "1.2.0"
 androidxTracing = "1.3.0-alpha02"
 coreKtx = "1.10.1"
@@ -18,6 +19,8 @@ junit = "4.13.2"
 ksp = "1.9.22-1.0.18"
 kotlin = "1.9.22"
 lifecycleRuntimeKtx = "2.6.1"
+protobuf = "3.25.2"
+protobufPlugin = "0.9.4"
 room = "2.6.1"
 truth = "1.4.2"
 appcompat = "1.6.1"
@@ -30,6 +33,8 @@ androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", versi
 androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+# Jetpack의 DataStore로, 안드로이드 애플리케이션에서 데이터 저장 및 관리를 위한 최신 API
+androidx-dataStore-core = { group = "androidx.datastore", name = "datastore", version.ref = "androidxDataStore" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "androidxHiltNavigationCompose" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -47,6 +52,8 @@ hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", v
 hilt-ext-compiler = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "hiltExt" }
 hilt-ext-work = { group = "androidx.hilt", name = "hilt-work", version.ref = "hiltExt" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
+protobuf-kotlin-lite = { group = "com.google.protobuf", name = "protobuf-kotlin-lite", version.ref = "protobuf" }
+protobuf-protoc = { group = "com.google.protobuf", name = "protoc", version.ref = "protobuf" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
@@ -71,6 +78,7 @@ jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = 
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+protobuf = { id = "com.google.protobuf", version.ref = "protobufPlugin" }
 room = { id = "androidx.room", version.ref = "room" }
 
 # Plugins defined by thisd project
