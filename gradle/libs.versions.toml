@@ -1,31 +1,96 @@
 [versions]
-agp = "8.4.0"
-kotlin = "1.9.0"
+androidDesugarJdkLibs = "2.0.4"
+androidGradlePlugin = "8.3.0"
+androidTools = "31.3.0"
+androidxActivity = "1.8.0"
+androidxComposeBom = "2024.02.02"
+androidxComposeCompiler = "1.5.8"
+androidxDataStore = "1.0.0"
+androidxHiltNavigationCompose = "1.2.0"
+androidxTracing = "1.3.0-alpha02"
 coreKtx = "1.10.1"
-junit = "4.13.2"
-junitVersion = "1.1.5"
+dependencyGuard = "0.4.3"
 espressoCore = "3.5.1"
+hilt = "2.51"
+hiltExt = "1.1.0"
+jacoco = "0.8.7"
+junitVersion = "1.1.5"
+junit = "4.13.2"
+ksp = "1.9.22-1.0.18"
+kotlin = "1.9.22"
 lifecycleRuntimeKtx = "2.6.1"
-activityCompose = "1.8.0"
-composeBom = "2023.08.00"
+protobuf = "3.25.2"
+protobufPlugin = "0.9.4"
+room = "2.6.1"
+truth = "1.4.2"
+appcompat = "1.6.1"
+material = "1.10.0"
 
 [libraries]
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidxActivity" }
+android-desugarJdkLibs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "androidDesugarJdkLibs" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }
+androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
-junit = { group = "junit", name = "junit", version.ref = "junit" }
-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+# Jetpack의 DataStore로, 안드로이드 애플리케이션에서 데이터 저장 및 관리를 위한 최신 API
+androidx-dataStore-core = { group = "androidx.datastore", name = "datastore", version.ref = "androidxDataStore" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "androidxHiltNavigationCompose" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
-androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
-androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
-androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
-androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
-androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+#  Android 앱의 성능 프로파일링 및 디버깅을 위한 추적 API를 제공
+androidx-tracing-ktx = { group = "androidx.tracing", name = "tracing-ktx", version.ref = "androidxTracing" }
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-android-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+hilt-ext-compiler = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "hiltExt" }
+hilt-ext-work = { group = "androidx.hilt", name = "hilt-work", version.ref = "hiltExt" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+protobuf-kotlin-lite = { group = "com.google.protobuf", name = "protobuf-kotlin-lite", version.ref = "protobuf" }
+protobuf-protoc = { group = "com.google.protobuf", name = "protoc", version.ref = "protobuf" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+truth = { group = "com.google.truth", name = "truth", version.ref = "truth" }
+
+# Dependencies of the included bulid-logic
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
+android-tools-common = { group = "com.android.tools", name = "common", version.ref = "androidTools" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+room-gradlePlugin = { group = "androidx.room", name = "room-gradle-plugin", version.ref = "room" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 [plugins]
-android-application = { id = "com.android.application", version.ref = "agp" }
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+android-test = { id = "com.android.test", version.ref = "androidGradlePlugin" }
+dependencyGuard = { id = "com.dropbox.dependency-guard", version.ref = "dependencyGuard" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+protobuf = { id = "com.google.protobuf", version.ref = "protobufPlugin" }
+room = { id = "androidx.room", version.ref = "room" }
 
+# Plugins defined by thisd project
+ppasic-android-application = { id = "ppasic.android.application", version = "unspecified" }
+ppasic-android-application-compose = { id = "ppasic.android.application.compose", version = "unspecified" }
+ppasic-android-application-flavors = { id = "ppasic.android.application.flavors", version = "unspecified" }
+ppasic-android-application-jacoco = { id = "ppasic.android.application.jacoco", version = "unspecified" }
+ppasic-android-hilt = { id = "ppasic.android.hilt", version = "unspecified" }
+ppasic-android-library = { id = "ppasic.android.library", version = "unspecified" }
+ppasic-android-library-compose = { id = "ppasic.android.library.compose", version = "unspecified" }
+ppasic-android-library-jacoco = { id = "ppasic.android.library.jacoco", version = "unspecified" }
+ppasic-android-lint = { id = "ppasic.android.lint", version = "unspecified" }
+ppasic-android-room = { id = "ppasic.android.room", version = "unspecified" }
+ppasic-android-test = { id = "ppasic.android.test", version = "unspecified" }
+ppasic-jvm-library = { id = "ppasic.jvm.library", version = "unspecified" }
