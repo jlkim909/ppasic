@@ -7,3 +7,7 @@ plugins {
 android {
     namespace = "com.hodak.ppasic.core.designsystem"
 }
+
+dependencies{
+    api(libs.androidx.compose.material3)
+}
