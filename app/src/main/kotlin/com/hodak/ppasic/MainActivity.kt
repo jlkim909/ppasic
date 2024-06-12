@@ -37,7 +37,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            CompositionLocalProvider() {
+            CompositionLocalProvider {
                 HoTheme {
                     HoApp()
                 }
