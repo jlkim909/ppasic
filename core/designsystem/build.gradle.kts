@@ -10,4 +10,6 @@ android {
 
 dependencies{
     api(libs.androidx.compose.material3)
+
+    implementation(libs.coil.kt.compose)
 }
