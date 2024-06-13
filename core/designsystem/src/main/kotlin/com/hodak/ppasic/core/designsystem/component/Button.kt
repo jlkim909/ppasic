@@ -23,8 +23,6 @@ import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.sizeIn
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
@@ -35,6 +33,7 @@ import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.hodak.ppasic.core.designsystem.icon.HoIcons
 import com.hodak.ppasic.core.designsystem.theme.HoTheme
 
 @Composable
@@ -217,7 +216,7 @@ fun HoButtonLeadingIconPreview() {
             HoButton(
                 onClick = {},
                 text = { Text("Test Button") },
-                leadingIcon = { Icon(imageVector = Icons.Default.Add, contentDescription = null) },
+                leadingIcon = { Icon(imageVector = HoIcons.Add, contentDescription = null) },
             )
         }
     }
@@ -241,7 +240,7 @@ fun HoOutlinedButtonLeadingIconPreview() {
             HoOutlinedButton(
                 onClick = {},
                 text = { Text("Test Button") },
-                leadingIcon = { Icon(imageVector = Icons.Default.Add, contentDescription = null) },
+                leadingIcon = { Icon(imageVector = HoIcons.Add, contentDescription = null) },
             )
         }
     }
@@ -265,7 +264,7 @@ fun HoTextButtonLeadingIconPreview() {
             HoTextButton(
                 onClick = {},
                 text = { Text("Test Button") },
-                leadingIcon = { Icon(imageVector = Icons.Default.Add, contentDescription = null) },
+                leadingIcon = { Icon(imageVector = HoIcons.Add, contentDescription = null) },
             )
         }
     }
