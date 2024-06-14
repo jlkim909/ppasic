@@ -274,4 +274,3 @@ object HoButtonDefaults {
     const val DISABLED_OUTLINED_BUTTON_BORDER_ALPHA = 0.12f
     val OutlinedButtonBorderWidth = 1.dp
 }
-

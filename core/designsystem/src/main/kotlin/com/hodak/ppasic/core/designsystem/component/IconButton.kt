@@ -103,7 +103,6 @@ fun IconButtonPreviewUnchecked() {
     }
 }
 
-
 object HoIconButtonDefaults {
     const val DISABLED_ICON_BUTTON_CONTAINER_ALPHA = 0.12f
 }
