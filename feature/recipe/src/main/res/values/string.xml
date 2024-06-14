@@ -15,5 +15,5 @@
      limitations under the License.
 -->
 <resources>
-    <string name="app_name">빠식</string>
+    <string name="feature_recipe_title">레시피</string>
 </resources>
