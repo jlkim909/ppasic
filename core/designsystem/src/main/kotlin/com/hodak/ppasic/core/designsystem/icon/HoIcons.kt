@@ -41,7 +41,7 @@ object HoIcons {
     val RecipeOutline = Icon.DrawableResourceIcon(R.drawable.core_designsystem_ic_recipe_outline)
     val Search = Icons.Rounded.Search
     val Settings = Icons.Rounded.Settings
-    val ViewDay = Icons.Default.MoreVert
+    val MoreVert = Icons.Default.MoreVert
 }
 
 sealed interface Icon {
