@@ -47,7 +47,7 @@ gradlePlugin {
             implementationClass = "AndroidApplicationJacocoConventionPlugin"
         }
         register("androidFeature") {
-            id = "ppasic.android.featrue"
+            id = "ppasic.android.feature"
             implementationClass = "AndroidFeatureConventionPlugin"
         }
         register("androidFlavors") {
