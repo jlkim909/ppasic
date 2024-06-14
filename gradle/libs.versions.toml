@@ -6,6 +6,7 @@ androidxActivity = "1.8.0"
 androidxAppCompat = "1.6.1"
 androidxComposeBom = "2024.02.02"
 androidxComposeCompiler = "1.5.8"
+androidxCoreSplashscreen = "1.0.1"
 androidxDataStore = "1.0.0"
 androidxHiltNavigationCompose = "1.2.0"
 androidxLifecycle = "2.7.0"
@@ -44,6 +45,7 @@ androidx-compose-foundation = { group = "androidx.compose.foundation", name = "f
 androidx-compose-foundation-layout = { group = "androidx.compose.foundation", name = "foundation-layout" }
 androidx-compose-material-iconsExtended = { group = "androidx.compose.material", name = "material-icons-extended" }
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-core-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "androidxCoreSplashscreen" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-dataStore-core = { group = "androidx.datastore", name = "datastore", version.ref = "androidxDataStore" }
 androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "androidxHiltNavigationCompose" }
