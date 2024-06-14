@@ -7,3 +7,8 @@ plugins {
 android {
     namespace = "com.hodak.ppasic.core.testing"
 }
+
+dependencies{
+    implementation(libs.androidx.test.rules)
+    implementation(libs.hilt.android.testing)
+}
