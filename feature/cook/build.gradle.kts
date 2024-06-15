@@ -5,5 +5,5 @@ plugins {
 }
 
 android {
-    namespace = "com.hodak.ppasic.feature.home"
+    namespace = "com.hodak.ppasic.feature.cook"
 }

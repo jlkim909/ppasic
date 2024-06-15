@@ -60,7 +60,7 @@ dependencies {
 
     implementation(projects.feature.cart)
     implementation(projects.feature.fridge)
-    implementation(projects.feature.home)
+    implementation(projects.feature.cook)
     implementation(projects.feature.recipe)
 
     implementation(libs.androidx.activity.compose)

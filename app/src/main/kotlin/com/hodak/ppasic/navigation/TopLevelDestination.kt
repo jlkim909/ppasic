@@ -19,8 +19,8 @@ package com.hodak.ppasic.navigation
 import com.hodak.ppasic.R
 import com.hodak.ppasic.core.designsystem.R as designSystemR
 import com.hodak.ppasic.feature.cart.R as cartR
+import com.hodak.ppasic.feature.cook.R as cookR
 import com.hodak.ppasic.feature.fridge.R as fridgeR
-import com.hodak.ppasic.feature.home.R as homeR
 import com.hodak.ppasic.feature.recipe.R as recipeR
 
 enum class TopLevelDestination(
@@ -32,7 +32,7 @@ enum class TopLevelDestination(
     HOME(
         selectedIconId = designSystemR.drawable.core_designsystem_ic_chef_hat,
         unselectedIconId = designSystemR.drawable.core_designsystem_ic_chef_hat,
-        iconTextId = homeR.string.feature_home_title,
+        iconTextId = cookR.string.feature_cook_title,
         titleTextId = R.string.app_name,
     ),
     FRIDGE(
