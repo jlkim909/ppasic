@@ -43,5 +43,5 @@ include(":core:ui")
 
 include(":feature:cart")
 include(":feature:fridge")
-include(":feature:home")
+include(":feature:cook")
 include(":feature:recipe")

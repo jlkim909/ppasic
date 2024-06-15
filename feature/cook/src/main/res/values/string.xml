@@ -15,5 +15,5 @@
      limitations under the License.
 -->
 <resources>
-    <string name="feature_home_title">요리</string>
+    <string name="feature_cook_title">요리</string>
 </resources>
