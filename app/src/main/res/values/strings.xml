@@ -16,4 +16,5 @@
 -->
 <resources>
     <string name="app_name">빠식</string>
+    <string name="not_connected">인터넷이 연결되지 않았습니다.</string>
 </resources>
