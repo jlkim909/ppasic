@@ -23,6 +23,8 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSizeClassApi
+import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
@@ -38,6 +40,7 @@ import com.hodak.ppasic.core.data.util.NetworkMonitor
 import com.hodak.ppasic.core.designsystem.theme.HoTheme
 import com.hodak.ppasic.core.model.data.DarkThemeConfig
 import com.hodak.ppasic.ui.HoApp
+import com.hodak.ppasic.ui.rememberHoAppState
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.onEach
@@ -52,6 +55,7 @@ class MainActivity : ComponentActivity() {
 
     val viewModel: MainActivityViewModel by viewModels()
 
+    @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         val splashScreen = installSplashScreen()
         super.onCreate(savedInstanceState)
@@ -100,11 +104,16 @@ class MainActivity : ComponentActivity() {
                 onDispose {}
             }
 
+            val appState = rememberHoAppState(
+                windowSizeClass = calculateWindowSizeClass(activity = this),
+                networkMonitor = networkMonitor,
+            )
+
             HoTheme(
                 darkTheme = darkTheme,
                 disableDynamicTheming = shouldDisableDynamicTheming(uiState),
             ) {
-                HoApp()
+                HoApp(appState = appState)
             }
         }
     }
