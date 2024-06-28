@@ -16,14 +16,22 @@
 
 package com.hodak.ppasic.core.designsystem.component
 
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.offset
+import androidx.compose.material3.Badge
 import androidx.compose.material3.FilledIconToggleButton
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.IconButtonColors
 import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.unit.dp
 import com.hodak.ppasic.core.designsystem.icon.HoIcons
 import com.hodak.ppasic.core.designsystem.theme.HoTheme
 
@@ -57,9 +65,42 @@ fun HoIconToggleButton(
     }
 }
 
+@Composable
+fun HoIconButtonWithBadge(
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    enabled: Boolean = true,
+    colors: IconButtonColors = IconButtonDefaults.iconButtonColors(),
+    badgeCount: Int = 0,
+    icon: @Composable () -> Unit,
+) {
+    Box {
+        IconButton(
+            onClick = onClick,
+            modifier = modifier,
+            enabled = enabled,
+            colors = colors,
+        ) {
+            icon()
+        }
+        if (badgeCount > 0) {
+            Badge(
+                content = {
+                    Text(
+                        text = "$badgeCount",
+                    )
+                },
+                modifier = Modifier
+                    .align(Alignment.TopEnd)
+                    .offset(x = (-4).dp, y = 4.dp),
+            )
+        }
+    }
+}
+
 @ThemePreviews
 @Composable
-fun IconButtonPreview() {
+fun HoIconButtonTogglePreview() {
     HoTheme {
         HoIconToggleButton(
             checked = true,
@@ -82,7 +123,7 @@ fun IconButtonPreview() {
 
 @ThemePreviews
 @Composable
-fun IconButtonPreviewUnchecked() {
+fun HoIconButtonTogglePreviewUnchecked() {
     HoTheme {
         HoIconToggleButton(
             checked = false,
@@ -99,6 +140,23 @@ fun IconButtonPreviewUnchecked() {
                     contentDescription = null,
                 )
             },
+        )
+    }
+}
+
+@ThemePreviews
+@Composable
+fun HoIconButtonWithBadgePreview() {
+    HoTheme {
+        HoIconButtonWithBadge(
+            onClick = {},
+            icon = {
+                Icon(
+                    painter = painterResource(HoIcons.Home.resourceId),
+                    contentDescription = null,
+                )
+            },
+            badgeCount = 3,
         )
     }
 }
